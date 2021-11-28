@@ -1,0 +1,44 @@
+{
+  "name": "vuesurvey",
+  "version": "0.0.1",
+  "description": "NodeJS backend and Vue.js frontend for SurveyJS",
+  "main": "app.js",
+  "scripts": {
+    "start": "node -r dotenv/config app.js",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:client": "vite",
+    "dev:server": "node -r dotenv/config app.js",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "author": "LukeAz",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LukeAz/VueSurvey.git"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "argon2": "^0.28.3",
+    "csurf": "1.11.0",
+    "cookie-parser": "^1.4.6",
+    "dompurify": "^2.3.3",
+    "jsdom": "^18.1.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "sqlite3": "https://github.com/mapbox/node-sqlite3/tarball/master",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "vue": "^3.2.22",
+    "vue-i18n": "^9.1.9",
+    "vue-router": "^4.0.11",
+    "@intlify/vite-plugin-vue-i18n": "^3.2.1",
+    "@vitejs/plugin-vue": "^1.10.0",
+    "concurrently": "^6.3.0",
+    "sass": "^1.43.3",
+    "vite": "^2.6.4"
+  }
+}

@@ -1,0 +1,17 @@
+.bg-navbar {
+    background-color: #003972;
+}
+.bg-index {
+    background-color: #EFF3F6;
+}
+.bg-footer {
+    background-color: #BFCEDC;
+}
+.max-width500 {
+    max-width: 500px;
+}
+.change-language {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+}

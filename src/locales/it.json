@@ -1,0 +1,62 @@
+{
+  "message": {
+    "general": {
+      "back": "Torna indietro"
+    },
+    "home": {
+      "typed": "Puoi ",
+      "data-typed-items": "scrivere sondaggi, modificare i tuoi sondaggi , condividere i tuoi sondaggi, vedere i risultati dei tuoi sondaggi",
+      "login": "Accedi",
+      "signup": "Registrati"
+    },
+    "surveys" : {
+      "title": "Qua sotto potrai vedere la lista dei sondaggi che puoi modificare, provare e vedere i risultati",
+      "share": "Condividi",
+      "edit": "Modifica",
+      "results": "Risultati",
+      "delete": "Elimina",
+      "name": "Nome",
+      "add": "Aggiungi"
+    },
+    "edit": {
+      "change-name": "Cambia nome",
+      "now": "Attuale",
+      "change-name-placeholder": "Inserisci il nuovo nome",
+      "apply": "Applica"
+    },
+    "profile": {
+      "title": "Modifica il tuo account",
+      "text": "Scegli cosa fare",
+      "description": "Per eliminare l'account ti verrà chiesta una conferma. Dopo l'eliminazione tutti i dati relativi al tuo account saranno cancellati. Non memorizziamo la tua password, ma un hash, nessuno sarà a conoscenza di essa.",
+      "change-password": "Cambia password",
+      "delete-account": "Elimina account",
+      "save": "Salva",
+      "delete": "Elimina",
+      "warning-delete": "Sei sicuro di voler cancellare l'account?",
+      "thanksgiving": "Grazie per aver usato questo servizio"
+    },
+    "footer": {
+      "contact": "Contatti"
+    },
+    "user" : {
+      "username": "Utente",
+      "password": "Password",
+      "passwordcheck": "Conferma password",
+      "oldpassword": "Vecchia password"
+    },
+    "not-found": {
+      "title": "ci siamo persi?",
+      "text": "Ci dispiace per il disagio, faremo di tutto per ritrovare la pagina da lei cercata!"
+    },
+    "error": {
+      "missing-parameter": "Parametri mancanti o vuoti",
+      "wrong-credentials": "Password o username sbagliati",
+      "password-not-match": "Le password non coincidono.",
+      "username-regex-error": "L'username deve essere tra 2 e 20 caratteri, magari hai inserito un simbolo proibito.",
+      "password-regex-error": "La password deve essere almeno lunga 8 caratteri, deve contenere 1 o più lettere maiuscole, minuscole e numeri. Infine almeno uno di questi simboli: ",
+      "username-already-used": "L'username inserito esiste già.",
+      "empty-survey": "Questo sondaggio non esiste oppure è vuoto",
+      "unauthorized": "Non sei autorizzato a fare questa richiesta, o c'è stato un errore generale."
+    }
+  }
+}
