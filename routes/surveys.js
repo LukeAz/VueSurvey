@@ -46,6 +46,13 @@ router.get("/results/:id", auth.isAuthorized, (req, res, next) => {
   
 router.post("/changeJson", auth.isAuthorized, csrfProtection, (req, res, next) => {
   let input = JSON.parse(req.body.json);
+  if(input.completedHtml)
+    input.completedHtml = DOMPurify.sanitize(input.completedHtml, {ALLOWED_TAGS});
+  if(input.completedBeforeHtml)
+    input.completedBeforeHtml = DOMPurify.sanitize(input.completedBeforeHtml, {ALLOWED_TAGS});
+  if(input.loadingHtml)
+    input.loadingHtml = DOMPurify.sanitize(input.loadingHtml, {ALLOWED_TAGS});
+  
   for(page in input.pages)
     for(el in input.pages[page].elements) 
       if(input.pages[page].elements[el].type == "html")
