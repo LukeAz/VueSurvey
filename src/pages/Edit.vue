@@ -55,7 +55,7 @@
           questionTypes: [
             "boolean", "checkbox", "comment", "dropdown", "expression", "html", "matrix", 
             "matrixdropdown", "matrixdynamic", "multipletext", "panel", "paneldynamic", 
-            "radiogroup", "rating", "text"
+            "radiogroup", "rating", "text", "image", "imagepiker"
           ]
         };
         let creator = new SurveyCreator.SurveyCreator("survey-creator-container", options);
