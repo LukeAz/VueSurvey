@@ -1,7 +1,7 @@
 # VueSurvey
 📜 Simple form and survey app using surveyjs. Using Vue.js for client side rendering and authentication via jwt
 
-This project can be viewed at https://survey.lukeaz.ml
+This project can be viewed at https://vuesurvey.lukeaz.ml
 
 ![logo](https://github.com/LukeAz/VueSurvey/blob/main/docs/preview.png)
 
