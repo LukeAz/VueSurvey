@@ -1,6 +1,6 @@
 {
   "name": "vuesurvey",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "NodeJS backend and Vue.js frontend for SurveyJS",
   "main": "app.js",
   "scripts": {
