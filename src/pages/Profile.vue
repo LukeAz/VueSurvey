@@ -1,78 +1,81 @@
 <template>
-  <div class="container  my-4">
-    <div class="text-center text-sm-start">
-      <router-link class="btn btn-dark" to="/"><i class="fas fa-backspace"></i> {{ $t('message.general.back') }}</router-link>
+  <div id="profile-main">
+    <div class="bg-homepage d-flex justify-content-center align-items-center">
+      <div class="text-center text-light">
+        <p class="fw-bold fs-1 text-color-yellow">VueSurvey <span class="text-color-blue">Profile</span></p>
+      </div>
     </div>
-    <p class="fs-1 text-center mt-2">VueSurvey <i>Profile</i></p>
-    <div class="card text-center">
-      <div class="card-header">{{ username }}</div>
-      <div class="card-body">
-        <h5 class="card-title">{{ $t('message.profile.title') }}</h5>
-        <p class="card-text text-decoration-underline">{{ $t('message.profile.text') }}</p>
-        <p class="card-text max-width500 mx-auto">{{ $t('message.profile.description') }}</p>
-        
-        <button type="button" class="btn btn-success col-4 me-3" data-bs-toggle="modal" data-bs-target="#changePassword">
-          {{ $t('message.profile.change-password') }}
-        </button>
-        <div class="modal fade" id="changePassword" tabindex="-1">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title">{{ $t('message.profile.change-password') }}</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                <div v-if="change_password_error">
-                  <div v-if="change_password_error == 'password-not-match'" class="alert alert-danger rounded-pill" role="alert">
-                    {{ $t('message.error.password-not-match') }}
-                  </div>
-                  <div v-else-if="change_password_error == 'password-regex-error'" class="alert alert-danger rounded-pill" role="alert">
-                    {{ $t('message.error.password-regex-error') }} [!@#$%^&*-_/]!
-                  </div> 
-                  <div v-else-if="change_password_error == 'wrong-credentials'" class="alert alert-danger rounded-pill" role="alert">
-                    {{ $t('message.error.wrong-credentials') }}
-                  </div>
-                  <div v-else class="alert alert-danger rounded-pill" role="alert">
-                    {{ $t('message.error.unauthorized') }}
-                  </div> 
-                </div>
-                <label class="form-label fw-bolder">{{ $t('message.user.oldpassword') }}</label>
-                <input @keyup.enter="" type="password" name="" class="form-control rounded-pill bg-index" v-model="oldpassword"> 
-                <label class="form-label mt-3 fw-bolder">{{ $t('message.user.password') }}</label>
-                <input @keyup.enter="" type="password" name="" class="form-control rounded-pill bg-index" v-model="password"> 
-                <label class="form-label mt-3 fw-bolder">{{ $t('message.user.passwordcheck') }}</label>
-                <input @keyup.enter="" type="password" name="" class="form-control rounded-pill bg-index" v-model="passwordcheck"> 
-              </div>
-              <div class="modal-footer">
-                <button @click="changePassword()" type="button" class="btn btn-success">{{ $t('message.profile.save') }}</button>
-              </div>
-            </div>
+
+    <div class="container my-4">
+      <div class="text-center text-sm-start">
+        <router-link class="btn btn-dark" to="/"><i class="fas fa-backspace"></i> {{ $t('message.general.back') }}</router-link>
+      </div>
+      <div class="card mt-4 border-5 border-end-0 border-bottom-0 border-top-0 border-dark">
+        <div class="card-body row">
+          <div class="col-3 d-none d-md-block">
+            <img src="/img/homepage/profile.webp" class="img-fluid rounded-3">
+          </div>
+          <div class="col">
+            <p class="fs-3">{{ $t('message.user.username') }}: <i class="text-color-blue">{{ username }}</i></p>
+            <button type="button" class="btn btn-outline-dark col-4 me-3" data-bs-toggle="modal" data-bs-target="#changePassword">
+              <i class="fas fa-lock"></i> {{ $t('message.profile.change-password') }}
+            </button>
+            <button type="button" class="btn btn-danger col-4" data-bs-toggle="modal" data-bs-target="#deleteAccount">
+              <i class="fas fa-times-circle"></i> {{ $t('message.profile.delete-account') }}
+            </button>
+            <p class="mt-3">{{ $t('message.profile.description') }}</p>
           </div>
         </div>
+        <div class="card-footer text-muted text-center">
+          {{ $t('message.profile.thanksgiving') }}
+        </div>
+      </div>
+    </div>
 
-        <button type="button" class="btn btn-danger col-4" data-bs-toggle="modal" data-bs-target="#deleteAccount">
-          {{ $t('message.profile.delete-account') }}
-        </button>
-        <div class="modal fade" id="deleteAccount" tabindex="-1">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title">{{ $t('message.profile.delete-account') }}</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                {{ $t('message.profile.warning-delete') }}
-              </div>
-              <div class="modal-footer">
-                <button @click="deleteAccount()" type="button" class="btn btn-danger">{{ $t('message.profile.delete') }}</button>
-              </div>
+    <div class="modal fade" id="changePassword" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-dark text-light">
+            <p class="modal-title h5">{{ $t('message.profile.change-password') }}</p>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center">
+            <div v-if="change_password_error" class="alert alert-danger rounded-3" role="alert">
+              <span v-if="change_password_error == 'password-not-match'">{{ $t('message.error.password-not-match') }}</span>
+              <span v-else-if="change_password_error == 'password-regex-error'">{{ $t('message.error.password-regex-error') }} [!@#$%^&*-_/]!</span> 
+              <span v-else-if="change_password_error == 'wrong-credentials'">{{ $t('message.error.wrong-credentials') }}</span>
+              <span v-else>{{ $t('message.error.unauthorized') }}</span> 
             </div>
+            <label class="form-label fw-bolder"><i class="fas fa-lock"></i> {{ $t('message.user.oldpassword') }}</label>
+            <input @keyup.enter="" type="password" name="" class="form-control rounded-pill bg-index" v-model="oldpassword"> 
+            <label class="form-label mt-3 fw-bolder"><i class="fas fa-lock"></i> {{ $t('message.user.password') }}</label>
+            <input @keyup.enter="" type="password" name="" class="form-control rounded-pill bg-index" v-model="password"> 
+            <label class="form-label mt-3 fw-bolder"><i class="fas fa-lock"></i> {{ $t('message.user.passwordcheck') }}</label>
+            <input @keyup.enter="" type="password" name="" class="form-control rounded-pill bg-index" v-model="passwordcheck"> 
+          </div>
+          <div class="modal-footer bg-light">
+            <button @click="changePassword()" type="button" class="btn btn-dark">{{ $t('message.profile.save') }}</button>
           </div>
         </div>
       </div>
-      <img src="/img/profile.jpg" class="card-img-top">
-      <div class="card-footer text-muted">{{ $t('message.profile.thanksgiving') }}</div>
     </div>
+    <div class="modal fade" id="deleteAccount" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-dark text-light">
+            <p class="modal-title h5">{{ $t('message.profile.delete-account') }}</p>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center">
+            {{ $t('message.profile.warning-delete') }}
+          </div>
+          <div class="modal-footer bg-light">
+            <button @click="deleteAccount()" type="button" class="btn btn-danger">{{ $t('message.profile.delete') }}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </template>
 
@@ -85,7 +88,7 @@
         username: "",
         oldpassword: "",
         password: "",
-        newpassword: "",
+        passwordcheck: "",
         change_password_error: "",
         delete_account_error: "",
         delete_account_modal: "",
@@ -131,7 +134,7 @@
           this.change_password_modal.hide();
         }).catch((err) => {
           this.change_password_error = err.response.data.message;
-        })
+        });
       }
     }
   }

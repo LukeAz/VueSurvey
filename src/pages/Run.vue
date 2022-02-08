@@ -1,11 +1,17 @@
 <template>
-  <div class="container my-4">
-    <div class="text-center text-sm-start">
-      <router-link class="btn btn-dark" to="/surveys"><i class="fas fa-backspace"></i> {{ $t('message.general.back') }}</router-link>
+  <div id="run-main">
+    <div class="bg-homepage d-flex justify-content-center align-items-center">
+      <div class="text-center text-light">
+        <p class="fw-bold fs-1 text-color-yellow">VueSurvey <span class="text-color-blue">Visualizer</span></p>
+      </div>
     </div>
-    <div class="text-center mt-2">
-      <p class="fs-1">VueSurvey <i>Visualizer</i></p>
-      <div id="survey-visualizer-container" class="mt-4"></div>
+    <div class="container my-4">
+      <div v-if="logged" class="text-center text-sm-start">
+        <router-link class="btn btn-dark" to="/surveys"><i class="fas fa-backspace"></i> {{ $t('message.general.back') }}</router-link>
+      </div>
+      <div class="text-center mt-2">
+        <div id="survey-visualizer-container" class="mt-4"></div>
+      </div>
     </div>
   </div>
 </template>
@@ -14,6 +20,11 @@
   import axios from 'axios';
 
   export default {
+    data() {
+      return {
+        logged: document.cookie ? document.cookie.split('; ').find(c => c.split('=')[0] == 'logged') != undefined : false, 
+      }
+    },
     mounted() {
       let id = this.$route.params.id;
       axios.get(`/api/surveys/getSurvey/${id}`).then((res) => {

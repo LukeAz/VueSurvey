@@ -10,11 +10,12 @@
       "signup": "Signup"
     },
     "surveys" : {
-      "title": "Below you can see the list of surveys that you can edit, try and see the results",
+      "title": "Choose what to do",
       "share": "Share",
       "edit": "Edit",
       "results": "Results",
       "delete": "Delete",
+      "confirm-delete": "Are you sure you want to delete this survey?",
       "name": "Name",
       "add": "Add"
     },

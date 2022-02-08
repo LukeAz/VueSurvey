@@ -10,11 +10,12 @@
       "signup": "Registrati"
     },
     "surveys" : {
-      "title": "Qua sotto potrai vedere la lista dei sondaggi che puoi modificare, provare e vedere i risultati",
+      "title": "Scegli cosa fare",
       "share": "Condividi",
       "edit": "Modifica",
       "results": "Risultati",
-      "delete": "Elimina",
+      "delete": "Elimina",      
+      "confirm-delete": "Sei sicuro di volere cancellare questo sondaggio?",
       "name": "Nome",
       "add": "Aggiungi"
     },

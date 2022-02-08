@@ -5,10 +5,14 @@ const sslcert = fs.readFileSync('cacert/ca.crt', 'utf8');
 const express = require('express');
 const helmet = require('helmet');
 const cookieParser = require('cookie-parser');
+const compression = require('compression');
+const robots = require('express-robots-txt');
 require("./db/db").initialize();
 
 const app = express();
 app.use(cookieParser());
+app.use(compression());
+app.use(robots({UserAgent: '*', Allow: '/'}));
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({extended: false}));
 app.use(express.static('dist'));
