@@ -2,12 +2,12 @@
   <div>
     <div class="bg-homepage d-flex justify-content-center align-items-center">
       <div class="text-center text-light">
-        <p class="fw-bold fs-1 text-color-yellow">VueSurvey <span class="text-color-blue">Dashboard</span></p>
+        <p class="fw-bold fs-1 text-color-yellow">VueSurvey, <span class="text-color-blue">{{ $t('surveys.title') }}</span></p>
       </div>
     </div>
     <div class="container text-center my-5">
       <img src="/img/vue.webp" class="img-fluid mb-3" width="120" height="120" alt="...">
-      <p class="fs-1">{{ $t('message.surveys.title') }} &#127916;</p>
+      <p class="fs-1">{{ $t('surveys.first') }} &#127916;</p>
 
       <section>
         <div class="mask d-flex align-items-center">
@@ -18,15 +18,15 @@
                   <table class="table table-striped table-bordered mb-0">
                     <thead class="bg-dark text-light">
                       <tr>
-                        <th scope="col"><label for="newsurvey">{{ $t('message.surveys.name') }}</label></th>
-                        <th scope="col">ACTION</th>
+                        <th scope="col"><label for="newsurvey">{{ $t('surveys.table.name') }}</label></th>
+                        <th scope="col">{{ $t('surveys.table.actions') }}</th>
                       </tr>
                     </thead>
                     <tbody>
                       <Survey v-for="x of surveys" :name="x.name" :id="x.id" :deleteSurvey="deleteSurvey"/>
                       <tr>
                         <td><input type="text" id="newsurvey" class="form-control rounded bg-index me-5" v-model="name"></td>
-                        <td><button @click="create()" class="btn btn-dark btn-block rounded"><i class="fas fa-plus"></i> {{ $t('message.surveys.add') }}</button></td>
+                        <td><button @click="create()" class="btn btn-dark btn-block rounded"><i class="fas fa-plus"></i> {{ $t('button.add') }}</button></td>
                       </tr>
                     </tbody>
                   </table>
@@ -39,10 +39,10 @@
 
       <div v-if="error" class="container my-3">
         <div v-if="error == 'missing-parameter'" class="alert alert-danger rounded-3" role="alert">
-          {{ $t('message.error.missing-parameter') }}
+          {{ $t('error.missing-parameter') }}
         </div>
         <div v-else class="alert alert-danger rounded-3" role="alert">
-          {{ $t('message.error.unauthorized') }}
+          {{ $t('error.unauthorized') }}
         </div> 
       </div>
     </div> 

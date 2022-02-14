@@ -2,13 +2,13 @@
   <div id="profile-main">
     <div class="bg-homepage d-flex justify-content-center align-items-center">
       <div class="text-center text-light">
-        <p class="fw-bold fs-1 text-color-yellow">VueSurvey <span class="text-color-blue">Profile</span></p>
+        <p class="fw-bold fs-1 text-color-yellow">VueSurvey, <span class="text-color-blue">{{ $t('profile.title') }}</span></p>
       </div>
     </div>
 
     <div class="container my-4">
       <div class="text-center text-sm-start">
-        <router-link class="btn btn-dark" to="/"><i class="fas fa-backspace"></i> {{ $t('message.general.back') }}</router-link>
+        <router-link class="btn btn-dark" to="/"><i class="fas fa-backspace"></i> {{ $t('button.back') }}</router-link>
       </div>
       <div class="card mt-4 border-5 border-end-0 border-bottom-0 border-top-0 border-dark">
         <div class="card-body row">
@@ -16,18 +16,18 @@
             <img src="/img/homepage/profile.webp" class="img-fluid rounded-3">
           </div>
           <div class="col">
-            <p class="fs-3">{{ $t('message.user.username') }}: <i class="text-color-blue">{{ username }}</i></p>
+            <p class="fs-3">{{ $t('user.username') }}: <i class="text-color-blue">{{ username }}</i></p>
             <button type="button" class="btn btn-outline-dark col-4 me-3" data-bs-toggle="modal" data-bs-target="#changePassword">
-              <i class="fas fa-lock"></i> {{ $t('message.profile.change-password') }}
+              <i class="fas fa-lock"></i> {{ $t('button.change-password') }}
             </button>
             <button type="button" class="btn btn-danger col-4" data-bs-toggle="modal" data-bs-target="#deleteAccount">
-              <i class="fas fa-times-circle"></i> {{ $t('message.profile.delete-account') }}
+              <i class="fas fa-times-circle"></i> {{ $t('button.delete-account') }}
             </button>
-            <p class="mt-3">{{ $t('message.profile.description') }}</p>
+            <p class="mt-3">{{ $t('profile.description') }}</p>
           </div>
         </div>
         <div class="card-footer text-muted text-center">
-          {{ $t('message.profile.thanksgiving') }}
+          {{ $t('profile.thanksgiving') }}
         </div>
       </div>
     </div>
@@ -36,25 +36,25 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header bg-dark text-light">
-            <p class="modal-title h5">{{ $t('message.profile.change-password') }}</p>
+            <p class="modal-title h5">{{ $t('button.change-password') }}</p>
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body text-center">
             <div v-if="change_password_error" class="alert alert-danger rounded-3" role="alert">
-              <span v-if="change_password_error == 'password-not-match'">{{ $t('message.error.password-not-match') }}</span>
-              <span v-else-if="change_password_error == 'password-regex-error'">{{ $t('message.error.password-regex-error') }} [!@#$%^&*-_/]!</span> 
-              <span v-else-if="change_password_error == 'wrong-credentials'">{{ $t('message.error.wrong-credentials') }}</span>
-              <span v-else>{{ $t('message.error.unauthorized') }}</span> 
+              <span v-if="change_password_error == 'password-not-match'">{{ $t('error.password-not-match') }}</span>
+              <span v-else-if="change_password_error == 'password-regex-error'">{{ $t('error.password-regex-error') }} [!@#$%^&*-_/]!</span> 
+              <span v-else-if="change_password_error == 'wrong-credentials'">{{ $t('error.wrong-credentials') }}</span>
+              <span v-else>{{ $t('error.unauthorized') }}</span> 
             </div>
-            <label class="form-label fw-bolder"><i class="fas fa-lock"></i> {{ $t('message.user.oldpassword') }}</label>
+            <label class="form-label fw-bolder"><i class="fas fa-lock"></i> {{ $t('user.oldpassword') }}</label>
             <input @keyup.enter="" type="password" name="" class="form-control rounded-pill bg-index" v-model="oldpassword"> 
-            <label class="form-label mt-3 fw-bolder"><i class="fas fa-lock"></i> {{ $t('message.user.password') }}</label>
+            <label class="form-label mt-3 fw-bolder"><i class="fas fa-lock"></i> {{ $t('user.password') }}</label>
             <input @keyup.enter="" type="password" name="" class="form-control rounded-pill bg-index" v-model="password"> 
-            <label class="form-label mt-3 fw-bolder"><i class="fas fa-lock"></i> {{ $t('message.user.passwordcheck') }}</label>
+            <label class="form-label mt-3 fw-bolder"><i class="fas fa-lock"></i> {{ $t('user.passwordcheck') }}</label>
             <input @keyup.enter="" type="password" name="" class="form-control rounded-pill bg-index" v-model="passwordcheck"> 
           </div>
           <div class="modal-footer bg-light">
-            <button @click="changePassword()" type="button" class="btn btn-dark">{{ $t('message.profile.save') }}</button>
+            <button @click="changePassword()" type="button" class="btn btn-dark">{{ $t('button.save') }}</button>
           </div>
         </div>
       </div>
@@ -63,14 +63,14 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header bg-dark text-light">
-            <p class="modal-title h5">{{ $t('message.profile.delete-account') }}</p>
+            <p class="modal-title h5">{{ $t('button.delete-account') }}</p>
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body text-center">
-            {{ $t('message.profile.warning-delete') }}
+            {{ $t('profile.warning-delete') }}
           </div>
           <div class="modal-footer bg-light">
-            <button @click="deleteAccount()" type="button" class="btn btn-danger">{{ $t('message.profile.delete') }}</button>
+            <button @click="deleteAccount()" type="button" class="btn btn-danger">{{ $t('button.delete') }}</button>
           </div>
         </div>
       </div>

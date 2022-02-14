@@ -1,63 +1,98 @@
 {
-  "message": {
-    "general": {
-      "back": "Go back"
-    },
-    "home": {
-      "typed": "Can ",
-      "data-typed-items": "write surveys, edit your surveys, share your surveys, see your survey results",
-      "login": "Login",
-      "signup": "Signup"
-    },
-    "surveys" : {
-      "title": "Choose what to do",
-      "share": "Share",
-      "edit": "Edit",
-      "results": "Results",
-      "delete": "Delete",
-      "confirm-delete": "Are you sure you want to delete this survey?",
-      "name": "Name",
-      "add": "Add"
-    },
-    "edit": {
-      "change-name": "Change name",
-      "now": "Current",
-      "change-name-placeholder": "Please enter the new name",
-      "apply": "Apply"
-    },
-    "profile": {
-      "title": "Modify your account",
-      "text": "Choose what to do",
-      "description": "To delete the account you will be asked for a confirmation. After deletion all data related to your account will be deleted. We do not store your password, but a hash of it, no one will be aware of it.",
-      "change-password": "Change your password",
-      "delete-account": "Delete your account",
-      "save": "Save",
-      "delete": "Delete",
-      "warning-delete": "Are you sure you want to delete the account?",
-      "thanksgiving": "Thank you for using this service"
-    },
-    "footer": {
-      "contact": "Contact"
-    },
-    "user" : {
-      "username": "Username",
-      "password": "Password",
-      "passwordcheck": "Password confirmation",
-      "oldpassword": "Old password"
-    },
-    "not-found": {
-      "title": "are we lost?",
-      "text": "Sorry for the inconvenience, we will do our best to find the page you are looking for!"
-    },
-    "error": {
-      "missing-parameter": "Missing or empty parameters",
-      "wrong-credentials": "Incorrect password or username",
-      "password-not-match": "Passwords do not match",
-      "username-regex-error": "The username must be between 2 and 20 characters, maybe you have entered a forbidden symbol",
-      "password-regex-error": "The password must be at least 8 characters long, must contain 1 or more uppercase letters, lowercase letters and numbers. Finally, at least one of these symbols: ",
-      "username-already-used": "The username you entered already exists",
-      "empty-survey": "This poll does not exist or is empty",
-      "unauthorized": "You are not authorized to make this request, or there has been a general error"
+  "button": {
+    "add": "Add",
+    "apply": "Apply",
+    "back": "Go back",
+    "change-name": "Change name",
+    "change-password": "Change password",
+    "copy": "Copy",
+    "copied": "Copied",
+    "delete": "Delete",
+    "delete-account": "Delete account",
+    "edit": "Edit",
+    "login": "Sign in",
+    "results": "Result",
+    "save": "Save",
+    "signup": "Sign up",
+    "share": "Share",
+    "next": "Next",
+    "previus": "Previus",
+    "menu": "Menu",
+    "profile": "Profilo",
+    "logout": "Esci",
+    "homepage": "Pagina iniziale"
+  },
+  "edit": {
+    "title": "Customize",
+    "now": "Actual"
+  },
+  "home": {
+    "title": "Welcome on",
+    "typed": "Can ",
+    "data-typed-items": "write surveys, edit your surveys, share your surveys, see the results of your surveys",
+    "first": "Discover how it works",
+    "second": "Customize your survey the way you want",
+    "cards": {
+      "title": "Features",
+      "body1": "Planning",
+      "text1": "Create your own survey and share it with your friends to plan your future actions",
+      "body2": "Edit",
+      "text2": "Edit your survey at any time, and correct your mistakes quickly",
+      "body3": "Results",
+      "text3": "Display your survey results in a clear and organized way"
     }
+  },
+  "profile": {
+    "title": "Profile",
+    "description": "To delete the account you will be asked for a confirmation. After deletion all data related to your account will be deleted. We do not store your password, but a hash of it, no one will be aware of it.",
+    "warning-delete": "Are you sure you want to delete the account?",
+    "thanksgiving": "Thank you for using this service"
+  },
+  "results": {
+    "title": "Results"
+  },
+  "run": {
+    "title": "Survey"
+  },
+  "surveys" : {
+    "title": "Dashboard",
+    "first": "Choose what to do",
+    "table": {
+      "name": "Name",
+      "actions": "Actions"
+    },
+    "share": {
+      "title": "Share this survey",
+      "body": "Share this link to get your friends to participate.i"
+    },
+    "confirm-delete": "Are you sure you want to delete this survey?",
+    "name": "Name"
+  },
+  "navbar": {
+    "offcanvas": {
+      "title": "Ben tornato"
+    }
+  },
+  "footer": {
+    "contact": "Contacts"
+  },
+  "user" : {
+    "username": "User",
+    "password": "Password",
+    "passwordcheck": "Confirm password",
+    "oldpassword": "Old password"
+  },
+  "not-found": {
+    "title": "are we lost?"
+  },
+  "error": {
+    "missing-parameter": "Missing or empty parameters",
+    "wrong-credentials": "Incorrect password or username",
+    "password-not-match": "Passwords do not match",
+    "username-regex-error": "The username must be between 2 and 20 characters, maybe you have entered a forbidden symbol",
+    "password-regex-error": "The password must be at least 8 characters long, must contain 1 or more uppercase letters, lowercase letters and numbers. Finally, at least one of these symbols: ",
+    "username-already-used": "The username you entered already exists",
+    "empty-survey": "This poll does not exist or is empty",
+    "unauthorized": "You are not authorized to make this request, or there has been a general error"
   }
 }

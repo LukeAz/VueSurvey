@@ -2,29 +2,29 @@
   <div id="run-main">
     <div class="bg-homepage d-flex justify-content-center align-items-center">
       <div class="text-center text-light">
-        <p class="fw-bold fs-1 text-color-yellow">VueSurvey <span class="text-color-blue">Editor</span></p>
+        <p class="fw-bold fs-1 text-color-yellow">VueSurvey <span class="text-color-blue">{{ $t('edit.title') }}</span></p>
       </div>
     </div>
   <div class="container my-4">
     <div class="text-center text-sm-start">
-      <router-link class="btn btn-dark" to="/surveys"><i class="fas fa-backspace"></i> {{ $t('message.general.back') }}</router-link>
+      <router-link class="btn btn-dark" to="/surveys"><i class="fas fa-backspace"></i> {{ $t('button.back') }}</router-link>
     </div>
     <div class="text-center mt-2">
-      <button class="btn btn-outline-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseChangeName"><i class="fas fa-pencil-alt"></i> {{ $t('message.edit.change-name') }}</button>
+      <button class="btn btn-outline-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseChangeName"><i class="fas fa-pencil-alt"></i> {{ $t('button.change-name') }}</button>
       <div class="collapse mt-4" id="collapseChangeName">
         <div class="card card-body">
-          <label class="form-label fw-bolder text-start">{{ $t('message.edit.now') }} : <i class="text-color-blue">{{name}}</i></label>
+          <label class="form-label fw-bolder text-start">{{ $t('edit.now') }} : <i class="text-color-blue">{{name}}</i></label>
           <div v-if="errorname">
             <div v-if="errorname == 'missing-parameter'" class="alert alert-danger rounded-pill" role="alert">
-              {{ $t('message.error.missing-parameter') }}
+              {{ $t('error.missing-parameter') }}
             </div>
             <div v-else class="alert alert-danger rounded-pill" role="alert">
-              {{ $t('message.error.unauthorized') }}
+              {{ $t('error.unauthorized') }}
             </div> 
           </div>  
           <div class="input-group">
             <input @keyup.enter="changeName()" type="text" class="form-control rounded-pill bg-index me-2" v-model="newname"> 
-            <button @click="changeName()" class="btn btn-dark btn-block rounded"><i class="fas fa-share-square"></i> {{ $t('message.edit.apply') }}</button> 
+            <button @click="changeName()" class="btn btn-dark btn-block rounded"><i class="fas fa-share-square"></i> {{ $t('button.apply') }}</button> 
           </div>
         </div>
       </div>

@@ -12,7 +12,7 @@
             <p class="text-center fw-bold">VueSurvey</p>
           </div>
           <div class="col-md-6 col-lg-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase mb-4">{{ $t('message.footer.contact') }}</h5>
+            <h5 class="text-uppercase mb-4">{{ $t('footer.contact') }}</h5>
             <ul class="list-unstyled">
               <li>
                 <p><i class="fab fa-github"></i> Github: <a class="text-color-yellow" href="https://github.com/lukeaz" target="_blank">https://github.com/lukeaz</a></p>

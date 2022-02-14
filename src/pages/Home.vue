@@ -2,14 +2,14 @@
   <div>
     <div class="bg-homepage d-flex justify-content-center align-items-center">
       <div class="text-center text-light">
-        <p class="fw-bold fs-1 text-color-yellow">Welcome on <span class="text-color-blue">VueSurvey</span></p>
-        <p class="fs-5"> {{ $t('message.home.typed') }} <span id="typed" class="fst-italic text-decoration-underline" :data-typed-items="$t('message.home.data-typed-items')"></span></p>
+        <p class="fw-bold fs-1 text-color-yellow">{{ $t('home.title') }} <span class="text-color-blue">Vuesurvey</span></p>
+        <p class="fs-5"> {{ $t('home.typed') }} <span id="typed" class="fst-italic text-decoration-underline" :data-typed-items="$t('home.data-typed-items')"></span></p>
       </div>
     </div>
 
     <div class="text-center mt-3">
       <img src="/img/vue.webp" class="img-fluid" width="120" height="120" alt="...">
-      <p class="fs-1">Scopri come funziona &#128175;</p>
+      <p class="fs-1">{{ $t('home.first') }} &#128175;</p>
       <div class="bg-preview mt-5">
         <div class="container position-relative preview">
           <div id="carousel" class="carousel carousel-dark slide rounded-3 border border-5" data-bs-ride="carousel">
@@ -31,20 +31,20 @@
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
+              <span class="visually-hidden">{{ $t('button.previus') }}</span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
+              <span class="visually-hidden">{{ $t('button.next') }}</span>
             </button>
           </div>
         </div>
-        <span class="fs-4">Personalizza il tuo sondaggio come vuoi te</span>
+        <span class="fs-4">{{ $t('home.second') }}</span>
       </div>
 
       <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 400" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><path d="M 0,400 C 0,400 0,200 0,200 C 79.17692307692306,167.15897435897435 158.35384615384612,134.3179487179487 230,156 C 301.6461538461539,177.6820512820513 365.7615384615385,253.8871794871795 456,241 C 546.2384615384615,228.1128205128205 662.6,126.13333333333333 743,133 C 823.4,139.86666666666667 867.8384615384615,255.57948717948716 943,268 C 1018.1615384615385,280.42051282051284 1124.0461538461539,189.54871794871795 1212,161 C 1299.9538461538461,132.45128205128205 1369.976923076923,166.22564102564104 1440,200 C 1440,200 1440,400 1440,400 Z" stroke="none" stroke-width="0" fill="#8c8c8cff" class="transition-all duration-300 ease-in-out delay-150 path-0" transform="rotate(-180 720 200)"></path></svg>
       
-      <p class="fs-1">Funzionalità</p>
+      <p class="fs-1">{{ $t('home.cards.title') }}</p>
       <section class="wrapper mb-5">
         <div class="container">
           <div class="row">
@@ -53,8 +53,8 @@
                 <img class="card-img d-none" src="/img/homepage/functionality/1.webp" alt="...">
                 <div class="card-img-overlay d-flex flex-column">
                   <div class="card-body">
-                    <small class="card-meta mb-2">Planning</small>
-                    <h4 class="card-title mt-0 text-white">Crea il tuo sondaggio e condividilo con i tuoi amici per pianificare le tue azioni future</h4>
+                    <small class="card-meta mb-2">{{ $t('home.cards.body1') }}</small>
+                    <h4 class="card-title mt-0 text-white">{{ $t('home.cards.text1') }}</h4>
                   </div>
                   <div class="card-footer">
                     <div class="media">
@@ -73,8 +73,8 @@
                 <img class="card-img d-none" src="/img/homepage/functionality/2.webp" alt="...">
                 <div class="card-img-overlay d-flex flex-column">
                   <div class="card-body">
-                    <small class="card-meta mb-2">Editing</small>
-                    <h4 class="card-title mt-0 text-white">Modifica il tuo sondaggio in qualsiasi momento, e correggi i tuoi errori velocemente</h4>
+                    <small class="card-meta mb-2">{{ $t('home.cards.body2') }}</small>
+                    <h4 class="card-title mt-0 text-white">{{ $t('home.cards.text2') }}</h4>
                   </div>
                   <div class="card-footer">
                     <div class="media">
@@ -93,8 +93,8 @@
                 <img class="card-img d-none" src="/img/homepage/functionality/3.webp" alt="...">
                 <div class="card-img-overlay d-flex flex-column">
                   <div class="card-body">
-                    <small class="card-meta mb-2">Results</small>
-                    <h4 class="card-title mt-0 text-white">Visualizza i risultati del tuo sondaggio in modo chiaro e organizzato</h4>
+                    <small class="card-meta mb-2">{{ $t('home.cards.body3') }}</small>
+                    <h4 class="card-title mt-0 text-white">{{ $t('home.cards.text3') }}</h4>
                   </div>
                   <div class="card-footer">
                     <div class="media">
